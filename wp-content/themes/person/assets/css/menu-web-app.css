@@ -1,0 +1,282 @@
+/**
+ *--------------------------------------------------------------------------
+ * web application menu - wam
+ *--------------------------------------------------------------------------
+ */
+    .wam-wrapper { display: none; }
+    @media only screen and (min-width: 0) and (max-width: 480px) {
+       body {
+          /* padding-top: 45px;*/
+       }
+       .dk_header_desktop, .person_desktop_header {
+           display: none;
+       }
+       .wam-wrapper { display: block }
+    }
+/**
+ *--------------------------------------------------------------------------
+ * web application menu - wam
+ *--------------------------------------------------------------------------
+ */
+
+    .wam-wrapper {
+        height: 50px;
+        width: 100%;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.4);
+        background: #fff;
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        cursor: pointer;
+    }
+    .wam-icons {
+        height: 100%;
+         display: flex;
+         flex-flow: nowrap;
+         justify-content: space-between;
+    }
+    .wam-icons a { display: flex; }
+    .wam-split {
+        display: flex;
+        height: 100%;
+    }
+    /* right side */
+    .wam-right {
+        width: 40%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .wam-menu-trigger {
+        margin: 0 10px;
+    }
+    
+    .wam-logo {
+        background-position: center center;
+        height: 50px;
+        width: 90px;
+    }
+
+
+
+    /* left side */
+    .wam-left {
+        width: 55%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .wam-search-trigger , .wam-cart-trigger , .wamp-account-trigger , .wam-dokan-trigger , .wam-search-back {
+        margin: 0 10px;
+    }
+    .wam-search-wrapper {
+        display: none;
+        background-color: white;
+        height: 50px;
+        width: 100%;
+        flex-flow: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .wam-search-back {
+        
+    }
+    .wam-form {
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .wam-search-form {
+        height: 50px;
+        width: 90%;
+    }
+    .wam-search-form input[type="text"] {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 12pt;
+        text-indent: 15px;
+    }
+    .app_menu_cart_items_count {
+        background-color: #4caf50 !important;
+        position: absolute !important;
+        float: left;
+        border-radius: 100%;
+        font-size: 11px !important;
+        color: #fff !important;
+        display: block !important;
+        width: 15px !important;
+        text-align: center !important;
+        height: 15px !important;
+        line-height: 12.5pt !important;
+    }
+/**
+ *--------------------------------------------------------------------------
+ * sidenav
+ *--------------------------------------------------------------------------
+ */
+    .wam-sidenav {
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100%;
+        overflow-x: auto;
+        box-shadow: 2px 0 10px -2px #888;
+        -webkit-box-shadow: 2px 0 10px -2px #888;
+        transition: all ease-in-out .2s;
+        z-index: 998;
+        cursor: pointer;
+    }
+    .wam-sidenav--visible {
+        left: 0px;
+        transition: all ease-in-out .2s;
+    }
+    .wam-dark-layer {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, .4);
+        transition: opacity .3s cubic-bezier(0, 0, .3, 1);
+        opacity: 0;
+        z-index: 997;
+        cursor: pointer;
+    }
+    .wam-dark-layer--visible {
+        display: block;
+        width: 100vh;
+        height: 100vh;
+        opacity: 0.9;
+        position: fixed;
+    }
+    .wam-sidenav .user-info-trigger { display: flex }
+    .wam-sidenav .header {
+        background-image: url("../images/sidenav-auth.png");
+        background-size: cover;
+        background-position: center right;
+        height: 180px;
+        width: 100%;
+        box-shadow: 0 0px 20px 2px grey;
+        position: relative;
+    }
+    .wam-sidenav .header .header-overlay{
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+                to bottom,
+                rgba(64, 64, 64, 1) 0%,
+                rgba(64, 64, 64, 0) 10%,
+                rgba(64, 64, 64, 0) 20%,
+                rgba(64, 64, 64, 0.3) 100%
+        );
+        
+    }
+    .wam-sidenav .header .user-info {
+        position: relative;
+        bottom: 70px;
+        right: 15px;
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        color: white;
+        padding-bottom: 15px;
+    }
+    .wam-sidenav .header .user-info .user-info-details { width: 70%; padding-right: 15px; }
+    .wam-sidenav .header .user-info .user-info-details .name { font-size: 12pt }
+    .wam-sidenav .header .user-info .user-info-img {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wam-sidenav .header .user-info .user-info-img img {
+        width: 60px;
+        border-radius: 100%;
+        border: 1px solid white;
+    }
+    .wam-sidenav ul.wam-menu { padding-top: 15px }
+    .wam-sidenav ul.wam-menu li:hover {
+        background-color: #f4f4f4;
+    }
+    .wam-sidenav ul.wam-menu li {
+        padding: 5px 10px;
+        line-height: 1.5em;
+        cursor: pointer;
+    }
+    .wam-sidenav ul.wam-menu li a {
+        color: #5e5e5e;
+        line-height: 2.5em;
+        font-size: 10pt;
+    }
+    .wam-sidenav ul.wam-menu li.wam-item-title  {
+        background-color: #f7f7f7;
+        padding: 8px 10px;
+    }
+    .wam-sidenav ul.wam-menu li a i.fa.fa-angle-right.pull-right { display: none; }
+    .wam-sidenav .header-not-logged-in {
+        display: flex;
+        padding-top: 70px;
+        padding-bottom: 15px;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        box-shadow: 0 0px 20px 2px grey;
+    }
+    .wam-sidenav .header-not-logged-int--nav {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+    .wam-sidenav .header-not-logged-int--nav a.wam-myaccount {
+        background-color: #eaeaea;
+        width: 70%;
+        text-align: center;
+        padding: 6px 5px;
+        margin: 10px 0;
+        border-radius: 15px;
+        color: #4a4a4a;
+        font-size: 11pt;
+        border: 1px solid #d6d3d3;
+        cursor: pointer;
+        transition: all ease-in-out .7s;
+    }
+    .wam-sidenav .header-not-logged-int--nav a.wam-myaccount:hover {
+        background-color: #e4e4e4;
+        transition: all ease-in-out .7s;
+    }
+/**
+ *--------------------------------------------------------------------------
+ * advance search plugin
+ *--------------------------------------------------------------------------
+ */
+    .wam-form .dgwt-wcas-search-form{
+        padding-left: 10px;
+        height: 100% !important;
+    }
+    .wam-form .dgwt-wcas-search-wrapp {
+        margin: 0 0 0 15px;
+        height: 100% !important;
+    }
+    .wam-form .dgwt-wcas-sf-wrapp {
+        height: 100% !important;
+    }
+    .wam-form .dgwt-wcas-search-submit {
+        display: none;
+    }
+    .wam-form .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+        padding: unset !important;
+        border: none !important;
+        outline: none !important;
+        font-size: 10pt;
+        height: 100% !important;
+        box-shadow: unset !important;
+    }

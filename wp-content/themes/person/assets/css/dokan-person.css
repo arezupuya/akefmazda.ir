@@ -1,0 +1,87 @@
+button[value="create_and_add_new"] {display:none;} 
+
+
+
+.page-content-onliner a {
+    color: #333;
+}
+.page-content-onliner a:hover {
+    color: #f00;
+}
+
+
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu {
+    background: #f7f7f7;
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    border: 1px solid #d8d8d8;
+    height: auto!important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active {
+    position: relative;
+    background: #fff;
+    margin-left: -2px;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li {
+    margin: 0;
+    border-bottom: 1px solid #d8d8d8;
+    position: relative;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li:hover,
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a:hover
+ {
+    background: #e6e6e6;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a:hover i{
+	color:#333 !Important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active:hover {
+    background:#fff !important;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li a{
+	color:#333;
+	padding: 8px 0 16px 0;
+}
+.dokan-dashboard .dokan-dash-sidebar{
+	background:none;
+}
+
+
+
+
+
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a:last-child:hover {
+
+    border-right: none !important;
+
+}
+
+/*-----------------------------------screen_respansive-----------------------------------------*/
+@media only screen and (max-width : 978px){
+	
+	.dokan-store-sidebar{width:100%;margin:0 !important;}
+	#dokan-primary{width:100%;}
+}
+
+
+@media only screen and (max-width : 768px){
+	
+	ul.dokan-dashboard-menu li{width: 50%;float:right;}
+	.dokan-dashboard-content{padding:0 !Important;}
+	.dokan-w6.dokan-dash-left, .dokan-w6.dokan-dash-right{float:none;width:100%;padding-right:0 !Important;padding-left:0 !Important;}
+	
+
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px){
+	
+
+}
+
+
+@media only screen and (max-width : 320px){
+	
+
+}
