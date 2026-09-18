@@ -288,7 +288,59 @@ var dokan = {"ajaxurl":"http:\/\/akefmazda.ir\/wp-admin\/admin-ajax.php","nonce"
 
 		
 		</style>
-		 </head>
+		 
+<style>
+/* Custom Gallery Styles */
+.custom-product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.custom-main-image {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.custom-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.custom-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+.custom-thumb {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.custom-thumb.active {
+    border-color: #dc2626;
+}
+.custom-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+<script>
+function changeMainImage(src, el) {
+    var mainImg = document.getElementById('custom-main-img');
+    mainImg.src = src;
+    var thumbs = document.querySelectorAll('.custom-thumb');
+    thumbs.forEach(function(t) { t.classList.remove('active'); });
+    el.classList.add('active');
+}
+</script>
+
+</head>
 <body class="rtl product-template-default single single-product postid-1455 woocommerce woocommerce-page woocommerce-no-js yith-wcms show_checkout_login_reminder yith-wcms-pro header_layout_person index_layout_person footer_layout_person dokan-theme-person">
 <!--header-->
 
@@ -377,7 +429,7 @@ var dokan = {"ajaxurl":"http:\/\/akefmazda.ir\/wp-admin\/admin-ajax.php","nonce"
 
             
                         <span class="menu_icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
-                        <ul class="mega_menu_by_onliner"><li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page menu_absahri"><a href="../../home-page/index.html">صفحه نخست</a></li>
+                        <ul class="mega_menu_by_onliner"><li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page menu_absahri"><a href="../../index.html">صفحه نخست</a></li>
 <li id="menu-item-1343" class="menu-item menu-item-type-post_type menu-item-object-page menu_absahri"><a href="../../checkout/index.html">سبد خرید</a></li>
 <li id="menu-item-1340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu_absahri"><a href="../../category/blog/index.html">بلاگ</a></li>
 <li id="menu-item-1341" class="menu-item menu-item-type-post_type_archive menu-item-object-product menu_absahri"><a href="../../shop/index.html">همه محصولات</a></li>
@@ -503,30 +555,35 @@ var dokan = {"ajaxurl":"http:\/\/akefmazda.ir\/wp-admin\/admin-ajax.php","nonce"
 	<div class="title_widg_index woocommerce_breadcrumb"><nav class="woocommerce-breadcrumb"><a href="../../index.html">خانه</a>&nbsp;&#47;&nbsp;<a href="../../product-category/نمایندگی-عاکف-مزدا/index.html">نمایندگی عاکف مزدا</a>&nbsp;&#47;&nbsp;چراغ عقب مزدا RX4</nav></div>
 	<div class="post-content">
 		<div id="product-1455" class="post-1455 product type-product status-publish has-post-thumbnail product_cat-91 pa_color-gray pa_color-31 first instock featured shipping-taxable product-type-simple">
-			<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
-            <div data-thumb="../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg" class="woocommerce-product-gallery__image first">
-                <a href="../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg">
-                    <img width="600" height="450" src="../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg" class="wp-post-image" alt="چراغ عقب مزدا RX4" />
-                </a>
-            </div>
-            <div data-thumb="../../images/mazda_929/mazda_rx4_cheragh_aghab_2.jpg" class="woocommerce-product-gallery__image ">
-                <a href="../../images/mazda_929/mazda_rx4_cheragh_aghab_2.jpg">
-                    <img width="600" height="450" src="../../images/mazda_929/mazda_rx4_cheragh_aghab_2.jpg" class="wp-post-image" alt="چراغ عقب مزدا RX4" />
-                </a>
-            </div>
-            <div data-thumb="../../images/mazda_929/mazda_rx4_cheragh_aghab_3.jpg" class="woocommerce-product-gallery__image ">
-                <a href="../../images/mazda_929/mazda_rx4_cheragh_aghab_3.jpg">
-                    <img width="600" height="450" src="../../images/mazda_929/mazda_rx4_cheragh_aghab_3.jpg" class="wp-post-image" alt="چراغ عقب مزدا RX4" />
-                </a>
-            </div>
-            <div data-thumb="../../images/mazda_929/mazda_rx4_cheragh_aghab_4.jpeg" class="woocommerce-product-gallery__image ">
-                <a href="../../images/mazda_929/mazda_rx4_cheragh_aghab_4.jpeg">
-                    <img width="600" height="450" src="../../images/mazda_929/mazda_rx4_cheragh_aghab_4.jpeg" class="wp-post-image" alt="چراغ عقب مزدا RX4" />
-                </a>
-            </div></figure>
+			
+<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 1; transition: opacity .25s ease-in-out;">
+<div class="custom-product-gallery">
+    <div class="custom-main-image">
+        <img id="custom-main-img" src="../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg" alt="تصویر محصول">
+    </div>
+    <div class="custom-thumbnails">
+
+        <div class="custom-thumb active" onclick="changeMainImage('../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg', this)">
+            <img src="../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg" alt="بند انگشتی">
+        </div>
+
+        <div class="custom-thumb " onclick="changeMainImage('../../images/mazda_929/mazda_rx4_cheragh_aghab_2.jpg', this)">
+            <img src="../../images/mazda_929/mazda_rx4_cheragh_aghab_2.jpg" alt="بند انگشتی">
+        </div>
+
+        <div class="custom-thumb " onclick="changeMainImage('../../images/mazda_929/mazda_rx4_cheragh_aghab_3.jpg', this)">
+            <img src="../../images/mazda_929/mazda_rx4_cheragh_aghab_3.jpg" alt="بند انگشتی">
+        </div>
+
+        <div class="custom-thumb " onclick="changeMainImage('../../images/mazda_929/mazda_rx4_cheragh_aghab_4.jpeg', this)">
+            <img src="../../images/mazda_929/mazda_rx4_cheragh_aghab_4.jpeg" alt="بند انگشتی">
+        </div>
+
+    </div>
 </div>
-			<div class="summary entry-summary">
+
+</div>
+                        <div class="summary entry-summary">
 
 				            <!-- psp_summary = perosn single product summmary -->
         <div class="psp_summary">
@@ -1023,7 +1080,7 @@ jQuery(document).ready(function() {
                 <div class="logo_footer" style="background-image:url('../../../../images/mazda_929/mazda_rx4_cheragh_aghab_1.jpg')">
                     <a href="../../index.html"></a>
                 </div>
-                <li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1344"><a href="../../home-page/index.html">صفحه نخست</a></li>
+                <li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1344"><a href="../../index.html">صفحه نخست</a></li>
 <li id="menu-item-1343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1343"><a href="../../checkout/index.html">سبد خرید</a></li>
 <li id="menu-item-1340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1340"><a href="../../category/blog/index.html">بلاگ</a></li>
 <li id="menu-item-1341" class="menu-item menu-item-type-post_type_archive menu-item-object-product menu-item-1341"><a href="../../shop/index.html">همه محصولات</a></li>
