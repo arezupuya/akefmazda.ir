@@ -274,7 +274,19 @@ var dokan = {"ajaxurl":"http:\/\/akefmazda.ir\/wp-admin\/admin-ajax.php","nonce"
 
 		
 		</style>
-		 </head>
+		 
+<style>
+/* Fix aspect ratio for newly added raw images */
+img.attachment-woocommerce_thumbnail, .woocommerce-loop-product__link img {
+    object-fit: cover !important;
+    height: 180px !important;
+    width: 100% !important;
+    max-width: 180px;
+    margin: 0 auto;
+}
+</style>
+
+</head>
 <body class="rtl archive tax-product_cat term-91 woocommerce woocommerce-page woocommerce-no-js yith-wcms show_checkout_login_reminder yith-wcms-pro header_layout_person index_layout_person footer_layout_person dokan-theme-person">
 <!--header-->
 
