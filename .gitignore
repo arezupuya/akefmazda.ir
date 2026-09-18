@@ -1,3 +1,5 @@
 wordpress/
 docker-compose.yml
 .DS_Store
+*.py
+*.bak
